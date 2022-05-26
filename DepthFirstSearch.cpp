@@ -2,6 +2,9 @@
 // a given vertex in a given graph
 #include<iostream>
 #include<list>
+#include<time.h>
+#include<stdlib.h>
+#include<Windows.h>
 using namespace std;
 
 // Graph class represents a directed graph
@@ -43,7 +46,9 @@ void Graph::DFSUtil(int v, bool visited[])
 	// Mark the current node as visited and
 	// print it
 	visited[v] = true;
-	cout << v << " ";
+	cout <<v<<" \n" ;
+    Sleep(100);
+
 
 	// Recur for all the vertices adjacent
 	// to this vertex
@@ -92,8 +97,8 @@ int main()
     g.addEdge(8, 6);
     
 	cout << "Following is Depth First Traversal"
-			" (starting from vertex 4) \n";
-	g.DFS(4);
+			" (starting from vertex 7) \n";
+	g.DFS(7);
   cout << endl;
 	return 0;
 }
