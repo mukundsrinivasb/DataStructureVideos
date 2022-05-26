@@ -76,29 +76,33 @@ void Graph::DFS(int v)
 int main()
 {
 	// Create a graph given in the above diagram
-	Graph g(9);
-	g.addEdge(0, 1);
-    g.addEdge(1, 0);
-    g.addEdge(0, 2);
-    g.addEdge(2, 0);
-    g.addEdge(1, 4);
-    g.addEdge(4, 1);
-    g.addEdge(2, 3);
-    g.addEdge(3, 2);
-    g.addEdge(3, 5);
-    g.addEdge(5, 3);
-    g.addEdge(4, 5);
-    g.addEdge(5, 4);
-    g.addEdge(4, 6);
-    g.addEdge(6, 4);
-    g.addEdge(4, 7);
-    g.addEdge(7, 4);
-    g.addEdge(6, 8);
-    g.addEdge(8, 6);
+
+    int numberOfEdges,numberOfVertices;
+    cout<<"What is the number of vertices on the graph? \n";
+    cin>>numberOfVertices;
+    Graph g(numberOfVertices);
+    cout<<"What is the number of edges on the graph ? \n";
+    cin>>numberOfEdges;
+    int edgeIndex = 0;
+    while(edgeIndex <= numberOfEdges){
+        cout<<"Enter the edge "<<edgeIndex;
+        cout<<"From which (x) to (y)";
+        int x,y;
+        cin>>x>>y;
+        g.addEdge(x,y);
+        g.addEdge(y,x);
+        edgeIndex++;
+    }
     
-	cout << "Following is Depth First Traversal"
-			" (starting from vertex 7) \n";
-	g.DFS(7);
-  cout << endl;
+    int startingNode;
+    cout<<"Enter the Node where you would like to start the search";
+    cin>>startingNode;
+    if(startingNode<=numberOfVertices && startingNode>0)
+    {
+        cout<<"The traversal starting from the node with Index "<<startingNode;
+        g.DFS(startingNode);
+        cout<<endl;
+    }
+
 	return 0;
 }
