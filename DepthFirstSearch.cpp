@@ -46,7 +46,7 @@ void Graph::DFSUtil(int v, bool visited[])
 	// Mark the current node as visited and
 	// print it
 	visited[v] = true;
-	cout <<v<<" \n" ;
+	cout<<" \n" <<v ;
     Sleep(100);
 
 
