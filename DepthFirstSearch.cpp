@@ -85,8 +85,8 @@ int main()
     cin>>numberOfEdges;
     int edgeIndex = 0;
     while(edgeIndex < numberOfEdges){
-        cout<<"Enter the edge "<<edgeIndex;
-        cout<<"From which (x) to (y)";
+        cout<<"Enter the edge : "<<edgeIndex;
+        cout<<"\nFrom which (x) to (y) : ";
         int x,y;
         cin>>x>>y;
         g.addEdge(x,y);
@@ -99,7 +99,7 @@ int main()
     cin>>startingNode;
     if(startingNode<=numberOfVertices && startingNode>0)
     {
-        cout<<"The traversal starting from the node with Index "<<startingNode;
+        cout<<"The traversal starting from the node with Index ";
         g.DFS(startingNode);
         cout<<endl;
     }
