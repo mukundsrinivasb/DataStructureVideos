@@ -105,4 +105,20 @@ int main()
     }
 
 	return 0;
+
 }
+
+ /**
+     * @brief Input sequence of edges for the first graph with 9 vertices
+     * 9 edges  while live coding is 
+     *   0 1
+         1 4
+         4 5
+         5 3
+         3 2
+         2 0
+         4 7
+         4 6
+         6 8
+     * 
+     */
