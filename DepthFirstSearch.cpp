@@ -122,3 +122,22 @@ int main()
          6 8
      * 
      */
+
+    /**
+     * @brief Input sequence of edges for the first graph with 13 vertices
+     * 14 edges  while live coding is 
+     *   5 6
+         5 7
+         7 8
+         7 12
+         7 9
+         9 11
+         10 0
+         0 1
+         1 2
+         2 3
+         3 4
+         1 9
+         5 2
+     * 
+     */
